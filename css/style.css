@@ -59,8 +59,41 @@ z-index: 2;
 color: #222;
 width: 50vw;
 }
-
 .top .content-body{
 left: 5%;
 color: #222;
+}
+.handle{
+position: absolute;
+width: 5px;
+height: 100%;
+display: block;
+background: #fdab00;
+top: 0;
+left: 50%;
+z-index: 3;
+}
+.skewed .handle{
+top: 50%;
+transform: rotate(30deg) translateY(-50%);
+height: 200%;
+transform-origin: top;
+}
+
+.skewed .top{
+transform: skew(-30deg);
+margin-left: -1000px;
+width: calc(50vw + 1000px);
+}
+
+.skewed .top .content-wrap{
+ transform: skew(30deg);
+ margin-left: 1000px;
+}
+
+
+@media screen and (max-width: 768px){
+*{
+font-size: 75%;
+}
 }
